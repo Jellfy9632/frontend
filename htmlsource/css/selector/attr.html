@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* [target] {
+      text-decoration: none;
+    } */
+    /* [target="_blank"] {
+      text-decoration: none;
+    } */
+    [target~="_blank"] {
+      text-decoration: none;
+    }
+    [title~="image"] {
+      border: 5px solid green;
+    }
+    [class^="test"] {
+      background: salmon;
+    }
+    [class$="test"] {
+      background: magenta;
+    }
+    /* [class*="test"] {
+      background: green;
+    } */
+    [class~="test"] {
+      background: green;
+    }
+    /* font-weight:bold, border-radius: 20px, padding: 10px, color*/
+    [class^="btn"] {
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 10px;
+    }
+    [class*="danger"] {
+      color: red;
+    }
+    [class*="success"] {
+      color: green;
+    }
+  </style>
+  <body>
+    <ul>
+      <li><a href="#" target="_blank">google</a></li>
+      <li><a href="#" target="_blank">naver</a></li>
+      <li><a href="#" target="_self">daum</a></li>
+    </ul>
+    <img src="../../image/img1.png" alt="" title="image" />
+    <img src="../../image/img1.png" alt="" title="super image" />
+    <img src="../../image/img1.png" alt="" title="power image" />
+    <div class="testing">First Div</div>
+    <div class="second test">second Div</div>
+    <div class="test">Third Div</div>
+    <div class="test_ex">Fourth Div</div>
+    <button class="btn-success">Success</button>
+    <button class="btn-danger">Danger</button>
+    <button>Normal</button>
+  </body>
+</html>

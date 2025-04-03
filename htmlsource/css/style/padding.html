@@ -11,7 +11,7 @@
         /* width: 100%; */
         /* height: 100px; */
         /* padding: 20px; */
-        /* padding: 시계방향(top, right, bottom, left) */
+        /* padding(안쪽여백): 시계방향(top, right, bottom, left) */
         /* padding: 10px 5px 15px 10px; */
         padding: 20px;
       }
@@ -20,16 +20,42 @@
         /* width: 100%;
         height: 100px; */
         padding: 20px;
+        display: inline-block;
+      }
+      div {
+        margin: 20px; /* 바깥쪽 여백  (시계방향)*/
+        text-align: center;
+      }
+      div a {
+        width: 40px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        line-height: 40px;
+      }
+      p:nth-of-type(2) {
+        /* display: none; */
+        visibility: hidden;
       }
     </style>
   </head>
   <body>
     <!-- 
      block (p,div) : 한 행 다 사용 / width : 100%, height:0 => 내용만큼 사용, 수치조절 가능
-     inline (a, span) : 내용만큼만 사용 width, height 를 가질 수 없음
+     inline (a, span) : 내용만큼만 사용 width, height 를 가질 수 없음 / 상,하 padding 가질 수 없음
+
+     display : inline, block, inline-block, none(요소 감춤)
+
+     margin 중복(병합) - 마진의 특정 값들이 중복되어 합쳐지는 현상
+     1. 형제요소들의 margin-top과 margin-bottom이 만났을 때
+     2. 부모 요소의 margin-top과 자식 요소의 margin-top이 만났을 때
+     3. 부모 요소의 margin-bottom과 자식요소의 margin-bottom이 만났을 때
     -->
     <p>block level</p>
     <span>inline level</span>
+    <span>inline level2</span>
 
     <div>
       <a href="">1</a>
@@ -37,6 +63,16 @@
       <a href="">3</a>
       <a href="">4</a>
       <a href="">5</a>
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo reprehenderit, porro autem fuga exercitationem minus
+      impedit aliquam quisquam veritatis, odio quos facilis debitis. Dolores at deserunt nesciunt excepturi, molestiae
+      similique?
+    </p>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident pariatur similique numquam maxime ducimus
+      libero repudiandae, quo explicabo accusamus doloribus corrupti rerum, officia voluptatibus doloremque commodi
+      quidem qui quia dolorum.
     </div>
   </body>
 </html>

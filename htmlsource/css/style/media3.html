@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 전체여백 0 */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      /* body 배경색 : #ecf0f1 */
+      body {
+        background-color: #ecf0f1;
+      }
+      /* wrapper : max-width : 60 rem, width: 100%*/
+      .wrapper {
+        max-width: 60rem;
+        width: 100%;
+        margin: 2rem auto;
+      }
+      /*  flexbg : flex 컨테이너 */
+      .flexbg {
+        display: flex;
+      }
+
+      /* main : 배경색 흰색, 안쪽여백 25,order 2 */
+      .flexbg main {
+        background-color: white;
+        padding: 25px;
+        order: 2;
+      }
+      /* left : 배경색 #349Bdb, order 1*/
+      .flexbg .left {
+        background-color: #349bdb;
+        order: 1;
+      }
+      /* right : 배경색 #34495e, order 3*/
+      .flexbg .right {
+        background-color: #34495e;
+        order: 3;
+      }
+      .flexbg .sidebar {
+        padding: 25px;
+        width: 20%;
+      }
+      /* 481~768 */
+      @media screen and (max-width: 768px) {
+        .flexbg {
+          /* display: flex; */
+          flex-wrap: wrap;
+        }
+        .flexbg main {
+          width: 100%;
+          order: 1;
+        }
+        .flexbg .sidebar {
+          width: 50%;
+        }
+        .flexbg .left {
+          order: 2;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .flexbg .sidebar {
+          width: 100%;
+        }
+      }
+
+      /* 0~480 */
+    </style>
+  </head>
+  <body>
+    <div class="wrapper flexbg">
+      <main>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, maxime facilis? Sint nobis velit ipsa
+          optio culpa necessitatibus iusto reiciendis sequi tempore. Reiciendis voluptate hic vitae, voluptatum odio
+          velit praesentium! Placeat aspernatur expedita eaque iste corrupti consequuntur quasi incidunt sed earum atque
+          eos quis, dignissimos consequatur omnis inventore modi ipsa vel quaerat facere autem. Maxime quidem quod
+          ducimus doloremque minus quisquam excepturi doloribus soluta harum! Ipsa iusto quo enim dolorum repellendus
+          provident nemo ea maxime tempora ducimus. Asperiores totam nihil soluta earum dolor et adipisci illum ex
+          dignissimos, libero ipsam vero. Officia commodi ratione explicabo iusto dolor soluta voluptates asperiores!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, maxime facilis? Sint nobis velit ipsa
+          optio culpa necessitatibus iusto reiciendis sequi tempore. Reiciendis voluptate hic vitae, voluptatum odio
+          velit praesentium! Placeat aspernatur expedita eaque iste corrupti consequuntur quasi incidunt sed earum atque
+          eos quis, dignissimos consequatur omnis inventore modi ipsa vel quaerat facere autem. Maxime quidem quod
+          ducimus doloremque minus quisquam excepturi doloribus soluta harum! Ipsa iusto quo enim dolorum repellendus
+          provident nemo ea maxime tempora ducimus. Asperiores totam nihil soluta earum dolor et adipisci illum ex
+          dignissimos, libero ipsam vero. Officia commodi ratione explicabo iusto dolor soluta voluptates asperiores!
+        </p>
+      </main>
+      <aside class="sidebar left">
+        <p>You might have some latest posts here on the left</p>
+      </aside>
+      <aside class="sidebar right">
+        <p>And some other widgets here on the right</p>
+      </aside>
+    </div>
+  </body>
+</html>

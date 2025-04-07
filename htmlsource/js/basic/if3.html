@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 국어,영어,수학점수를 입력받은 후 평균점에 맞는 학점 출력
+      // >=90 A, >=80 B, >=70 C, >= 60 D,F
+
+      let lang = Number(prompt("국어 점수를 입력하세요"));
+      let eng = Number(prompt("영어 점수를 입력하세요"));
+      let math = Number(prompt("수학 점수를 입력하세요"));
+
+      let avg = (lang + eng + math) / 3;
+
+      document.write("평균 : " + avg + "\n");
+
+      // if (avg >= 90) {
+      //   document.write("<h3>학점 A</h3>");
+      // } else if (avg >= 80) {
+      //   document.write("<h3>학점 B</h3>");
+      // } else if (avg >= 70) {
+      //   document.write("<h3>학점 C</h3>");
+      // } else if (avg >= 60) {
+      //   document.write("<h3>학점 D</h3>");
+      // } else {
+      //   document.write("<h3>학점 F</h3>");
+      // }
+
+      switch (parseInt(avg / 10)) {
+        case 10:
+        case 9:
+          document.write("A");
+          break;
+        case 8:
+          document.write("B");
+          break;
+        case 7:
+          document.write("C");
+          break;
+        case 6:
+          document.write("D");
+          break;
+
+        default:
+          document.write("F");
+          break;
+      }
+    </script>
+  </body>
+</html>

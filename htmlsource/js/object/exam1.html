@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 다음을 함수로 만들기
+      // 사용자로부터 이름 입력받기 (영어로), 전화번호 입력받기
+      // 이름 => 대문자로 변경 후 출력
+      // 전화번호 => 000-0000-0000 => 000-####-0000
+
+      function print() {
+        const name = prompt("영어 소문자 이름을 입력하세요");
+        const tel = prompt("전화 번호를 입력하세요 ('-'를 포함)");
+
+        document.write(name.toUpperCase());
+        document.write("<br");
+        document.write(tel.replace(tel.slice(4, 8), "####"));
+      }
+      print();
+    </script>
+  </body>
+</html>

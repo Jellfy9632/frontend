@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #target {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body id="target">
+    <div>
+      <input type="radio" name="color" id="" value="lightblue" />파랑
+      <input type="radio" name="color" id="" value="green" />녹색
+    </div>
+  </body>
+  <script>
+    // const rdos = document.querySelectorAll("[type='radio']");
+    // console.log(rdos[0]);
+    // console.log(rdos[1]);
+    // // 파랑 radio 클릭 되면 body 배경색 파랑
+    // // rdos[0].addEventListener("click", () => (document.body.style.background = "blue"));
+    // // // 녹색 radio 클릭 되면 body 배경색 녹색
+    // // rdos[1].addEventListener("click", () => (document.body.style.background = "green"));
+
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+
+    // rdos[0].addEventListener("click", (e) => {
+    //   const value = e.target.value;
+    //   console.log(value);
+    //   changeColor(e.target.value);
+    //   //   changeColor("lightblue");
+    // });
+
+    // rdos[1].addEventListener("click", (e) => {
+    //   const value = e.target.value;
+    //   console.log(value);
+    //   changeColor(e.target.value);
+    //   // changeColor("green")
+    // });
+
+    // 이벤트 버블링
+    const colorNode = document.querySelector("div");
+    colorNode.addEventListener("click", (e) => changeColor(e.target.value));
+  </script>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        background: skyblue;
+        padding: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 10px;
+        display: none;
+        position: relative;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(54, 62, 220);
+        color: white;
+        cursor: pointer;
+      }
+      /* 알림창 숨기기 */
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      알림창
+      <span class="close">X</span>
+    </div>
+    <button class="show">알림창 보여주기</button>
+  </body>
+  <script>
+    // 처음엔 알림창을 보이지 않음
+    // 보여주기를 누르면 보임
+    document.querySelector(".show").addEventListener("click", () => {
+      document.querySelector(".alert-box").style.display = "block";
+    });
+
+    document.querySelector(".close").addEventListener("click", () => {
+      document.querySelector(".alert-box").style.display = "none";
+    });
+  </script>
+</html>

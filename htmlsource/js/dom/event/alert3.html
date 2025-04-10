@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .alert-box {
+        background: skyblue;
+        padding: 20px;
+        color: white;
+        border-radius: 5px;
+        margin: 10px;
+        display: none;
+        position: relative;
+      }
+      button {
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(54, 62, 220);
+        color: white;
+        cursor: pointer;
+      }
+      /* 알림창 숨기기 */
+      .close {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alert-box">
+      알림창
+      <span class="close">X</span>
+    </div>
+    <button class="button1">아이디</button>
+    <button class="button2">비밀번호</button>
+  </body>
+  <script>
+    // //  버튼1 클릭 알림창 => 아이디를 입력해주세요
+    // document.querySelector(".button1").addEventListener("click", () => {
+    //   document.querySelector(".alert-box").style.display = "block";
+    //   document.querySelector(".alert-box").innerHTML = '아이디를 입력해주세요 <span class="close">X</span>';
+    // });
+    // // 버튼2 클릭 알림창 => 비밀번호를 입력해주세요
+    // document.querySelector(".button2").addEventListener("click", () => {
+    //   document.querySelector(".alert-box").style.display = "block";
+    //   document.querySelector(".alert-box").textContent = "비밀번호를 입력해주세요";
+    // });
+
+    // const alBx = document.querySelector(".alert-box");
+
+    // const btns = document.querySelectorAll("button");
+
+    // btns[0].addEventListener("click", () => {
+    //   alBx.style.display = "block";
+    //   alBx.innerHTML = "아이디를 입력해 주세요 <span class='close'>X</span>";
+
+    //   const x = document.querySelector(".close");
+    //   x.addEventListener("click", () => {
+    //     alBx.style.display = "none";
+    //   });
+    // });
+
+    // btns[1].addEventListener("click", () => {
+    //   alBx.style.display = "block";
+    //   alBx.innerHTML = "비밀번호를 입력해 주세요 <span class='close'>X</span>";
+
+    //   const x = document.querySelector(".close");
+    //   x.addEventListener("click", () => {
+    //     alBx.style.display = "none";
+    //   });
+    // });
+
+    const alBx = document.querySelector(".alert-box");
+
+    const btns = document.querySelectorAll("button");
+
+    btns[0].addEventListener("click", () => {
+      alBx.style.display = "block";
+      alBx.firstChild.nodeValue = "아이디를 입력해주세요";
+    });
+
+    btns[1].addEventListener("click", () => {
+      alBx.style.display = "block";
+      alBx.firstChild.nodeValue = "비밀번호를 입력해주세요";
+    });
+
+    const x = document.querySelector(".close");
+    x.addEventListener("click", () => {
+      alBx.style.display = "none";
+    });
+  </script>
+</html>

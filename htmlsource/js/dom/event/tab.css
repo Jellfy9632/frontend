@@ -1,0 +1,41 @@
+/*  border 포함한 크기 지정 */
+* {
+    box-sizing : border-box;
+}
+/* ul.list : 블릿기호 없애기, 모든여백 0, 아래쪽 테두리 : 1px solid #ccc */
+
+ul.list{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-button{
+    padding: 10px 20px;
+    color: gray;
+    cursor: pointer;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+/*옆으로배치, 글자색회색, 마우스 올리면 커서 포인터*/
+/* tab-button : 안쪽여백 : 위,,아래 10, 왼 오 20, */
+
+.orange{
+    border-top: 2px solid orange ;
+    border-right: 2px solid #ccc ;
+    border-bottom: 2px solid white ;
+    border-left: 2px solid #ccc ;
+    color: black;
+    margin-top: -2px;
+}
+
+.tab-content{
+    display: none;
+}
+
+.show{
+    display: block;
+}
